@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "generated": "2026-05-05T12:02:29.856Z",
+  "generated": "2026-05-14T12:06:15.273Z",
   "description": "Mapa das 5 camadas semânticas do domínio de O&G brasileiro. Use para entender a proveniência e o nível de formalidade de cada conceito.",
   "layers": [
     {
@@ -141,25 +141,17 @@
       "data_tripartition": {
         "master_data": {
           "description": "Entidades estáveis de negócio: Well, Wellbore, Field, Basin, Organisation, GeologicalFormation, Reservoir",
-          "geolytics_node_types": [
-            "operational",
-            "actor"
-          ],
+          "geolytics_node_types": ["operational", "actor"],
           "kind_prefix": "opendes:osdu:master-data--"
         },
         "reference_data": {
           "description": "Vocabulários controlados: WellStatus, WellType, LithologyType, FluidType, UnitOfMeasure",
-          "geolytics_node_types": [
-            "instrument",
-            "geological"
-          ],
+          "geolytics_node_types": ["instrument", "geological"],
           "kind_prefix": "opendes:osdu:reference-data--"
         },
         "work_product_components": {
           "description": "Dados interpretativos: WellLog, WellboreMarker, WellboreTrajectory, WellborePressure",
-          "geolytics_node_types": [
-            "analytical"
-          ],
+          "geolytics_node_types": ["analytical"],
           "kind_prefix": "opendes:osdu:work-product-component--"
         }
       },
@@ -196,20 +188,9 @@
         "pvt": "opendes:osdu:work-product-component--WellborePressure:1.0.0"
       },
       "geolytics_coverage": [
-        "poco",
-        "wellbore",
-        "campo",
-        "bacia-sedimentar",
-        "operador",
-        "formacao",
-        "reservatorio",
-        "litologia",
-        "classe-fluido",
-        "unidade-medida",
-        "perfil-poco",
-        "topo-formacional",
-        "trajetoria-poco",
-        "pvt"
+        "poco", "wellbore", "campo", "bacia-sedimentar", "operador",
+        "formacao", "reservatorio", "litologia", "classe-fluido",
+        "unidade-medida", "perfil-poco", "topo-formacional", "trajetoria-poco", "pvt"
       ]
     },
     {
@@ -219,17 +200,9 @@
       "type": "regulatory_framework",
       "description": "Marco legal e regulatório brasileiro de E&P. ÚNICA camada com cobertura de conceitos jurídico-contratuais brasileiros: Bloco, PAD, Contrato E&P, Rodada de Licitação, UTS, Regime Contratual, Período Exploratório, Etapa Prorrogada, Processo Sancionador. Estes conceitos NÃO existem em nenhuma outra ontologia internacional.",
       "unique_concepts": [
-        "bloco",
-        "contrato-ep",
-        "pad",
-        "rodada-licitacao",
-        "uts",
-        "regime-contratual",
-        "periodo-exploratorio",
-        "etapa-prorrogada",
-        "processo-sancionador",
-        "notificacao-descoberta",
-        "declaracao-comercialidade"
+        "bloco", "contrato-ep", "pad", "rodada-licitacao", "uts",
+        "regime-contratual", "periodo-exploratorio", "etapa-prorrogada",
+        "processo-sancionador", "notificacao-descoberta", "declaracao-comercialidade"
       ],
       "geolytics_coverage": "all_23_glossario_terms"
     },
@@ -240,28 +213,9 @@
       "type": "corporate_internal_ontology",
       "namespace": "https://petrobras.com.br/geolytics/ontology/",
       "prefix": "geo:",
-      "modules": [
-        "M7 Geoquímica",
-        "M8 Rocha",
-        "M9 Geomecânica",
-        "M10 Fluidos"
-      ],
-      "systems": [
-        "GEOQWIN",
-        "SIRR",
-        "LIMS",
-        "BDIEP",
-        "AIDA",
-        "GDA",
-        "GEOMECBR",
-        "GERESIM",
-        "TrapTester"
-      ],
-      "internal_standards": [
-        "PE-2E&P-00531",
-        "PE-2E&P-00463",
-        "PE-2P&D-00189"
-      ],
+      "modules": ["M7 Geoquímica", "M8 Rocha", "M9 Geomecânica", "M10 Fluidos"],
+      "systems": ["GEOQWIN", "SIRR", "LIMS", "BDIEP", "AIDA", "GDA", "GEOMECBR", "GERESIM", "TrapTester"],
+      "internal_standards": ["PE-2E&P-00531", "PE-2E&P-00463", "PE-2P&D-00189"],
       "description": "Ontologia operacional interna da Petrobras para o Geolytics. Namespace próprio + ligação a sistemas corporativos. Inclui APENAS definições conceituais públicas — dados Sigilo=Interno NÃO são publicados aqui.",
       "status": "v0.1 Preliminar/Interno",
       "publication_policy": "Apenas definições conceituais + estrutura de classes/propriedades. NÃO incluir dados operacionais reais nem configurações de sistemas.",
@@ -289,14 +243,8 @@
         "geologiccontact (40)"
       ],
       "vocabularies_reused": [
-        "QUDT",
-        "W3C SOSA/SSN",
-        "W3C Time + Allen",
-        "OGC GeoSPARQL",
-        "CGI Geoscience Terms",
-        "ICC chart",
-        "schema.org",
-        "DCT"
+        "QUDT", "W3C SOSA/SSN", "W3C Time + Allen", "OGC GeoSPARQL",
+        "CGI Geoscience Terms", "ICC chart", "schema.org", "DCT"
       ],
       "description": "Ontologia de geociência estrutural e materiais rochosos do projeto Loop3D (GSC, Canadá). Cobre falhas, dobras, foliação, lineação, contatos, tempo geológico ICC, e padrão GSOC quality/role/value alinhado a BFO. Domínio adjacente a E&P: complementa OSDU/ontopetro com geologia estrutural rigorosa que era gap no geolytics. 213 classes importadas via scripts/gso-extract.js.",
       "extractor": "scripts/gso-extract.js",
